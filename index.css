@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  /* subheading */
+  --c-text-violet-pale: hsl(276, 100%, 81%);
+  /* left chat text */
+  --c-text-violet-med: hsl(276, 55%, 52%);
+  /*  right chat text*/
+  --c-text-violet-dark: hsl(271, 15%, 43%);
+  /* placeholder text */
+  --c-text-gray: hsl(206, 6%, 79%);
+  /* heading text */
+  --c-text-violet-darkest: hsl(271, 36%, 24%);
+  /* paragraph text */
+  --c-text-violet-gray: hsl(270, 7%, 64%);
+
+  /* Gradients */
+  --c-gradient-magenta: hsl(293, 100%, 63%);
+  --c-gradient-violet: hsl(264, 100%, 61%);
+
+  /* Backgrounds */
+
+  /* phone bg */
+  --c-bg-white: hsl(0, 0%, 100%);
+  /* app bg */
+  --c-bg-violet-gray: hsl(270, 20%, 96%);
+  /* submit button bg */
+  --c-bg-violet-dark: hsl(271, 36%, 24%);
+  /* radio button outline */
+  --c-bg-magenta: hsl(289, 100%, 72%);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+ 
+  margin: 0; 
+}
+main{
+    min-height: 100vh; 
+    position: relative; 
+}
+.phone {
+  box-shadow: 0 15px 50px hsla(206, 6%, 79%, 0.8);
+  border-radius: 2rem;
+  width: 20rem;
+  padding: 1rem;
+  margin: 0 auto;
+  scale: 0.8;
+  background-color: var(--c-bg-white );
+}
+
+.screen {
+  position: relative;
+}
+.cameraBox {
+  position: absolute;
+  background-color: var(--c-bg-white);
+  width: 11rem;
+  height: 1.5rem;
+  left: 50%;
+  translate: -50%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  top: -2px;
+}
+.chatHeader {
+  background: linear-gradient(
+    95deg,
+    var(--c-gradient-violet),
+    var(--c-gradient-magenta)
+  );
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 1.5rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  box-shadow: 0 5px 10px hsla(206, 6%, 79%, 0.8);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: solid 1px var(--c-bg-white);
+  margin-inline: 0.8rem;
+}
+
+.arrow .arrow-top {
+  height: 10px;
+  width: 3px;
+  background-color: var(--c-bg-white);
+  rotate: 40deg;
+  translate: 0 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.arrow .arrow-bottom {
+  height: 10px;
+  width: 3px;
+  background-color: var(--c-bg-white);
+  rotate: -40deg;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.chatInfo p {
+  line-height: 1em;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--c-bg-white);
+  margin: 0 0 0.3rem 0;
+}
+
+.available {
+  color: var(--c-text-violet-pale);
+  font-size: 0.7rem;
+  margin: 0;
+}
+.ellipses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-left: auto;
+}
+.ellipse {
+  width: 2px;
+  height: 2px;
+  background-color: var(--c-bg-white);
+  border-radius: 50%;
+}
+
+.chatBox {
+  background-color: var(--c-bg-violet-gray);
+  padding: 1rem 0.8rem;
+  display: grid;
+  grid-gap: 0.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.chatBox p {
+  margin: 0;
+}
+
+.message {
+  width: fit-content;
+  font-size: 0.8rem;
+  padding: 0.8rem 0.8rem;
+}
+
+.message p {
+  max-width: 11rem;
+}
+.messageLeft {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 1rem;
+}
+.messageLeft.normal {
+  color: var(--c-text-violet-med);
+  background-color: hsl(276, 55%, 95%);
+}
+
+.messageLeft.price {
+  background: linear-gradient(
+    45deg,
+    var(--c-gradient-magenta),
+    var(--c-gradient-violet)
+  );
+  display: flex;
+  align-items: center;
+  color: var(--c-bg-white);
+  width: 13rem;
+}
+.price .circle {
+  width: 15px;
+  height: 15px;
+  border: solid 1px var(--c-bg-magenta);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.chatBox .priceOfWalk {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.userMessages {
+  place-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+.messageRight {
+  background-color: var(--c-bg-white);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 0.3rem;
+  color: var(--c-text-violet-dark);
+  box-shadow: 0 5px 10px hsla(206, 6%, 79%, 0.3);
+}
+.imagesBox {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: end;
+}
+.imagesBox img {
+  width: 50px;
+  border-radius: 1rem;
+}
+
+.writeMessageBox {
+  margin-top: 1rem;
+  background-color: var(--c-bg-white);
+  border-radius: 2rem;
+  padding-block: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.placeholder {
+  color: var(--c-text-gray);
+  font-size: 0.9rem;
+}
+
+.submit {
+  background-color: var(--c-bg-violet-dark);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.submit .arrow {
+  rotate: 180deg;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 2rem;  
+  padding-bottom: 5rem;  
+}
+.header {
+  color: var(--c-text-violet-darkest);
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.desc {
+  color: var(--c-text-violet-dark);
+  text-align: center;
+  max-width: 50ch;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+
+.accent-dark{
+    position: absolute; 
+    top: -2rem;  
+    left: 0;   
+    width: 10rem; 
+    height: 25rem; 
+    background: linear-gradient(180deg, var(--c-gradient-magenta), var(--c-gradient-violet));  
+    border-bottom-right-radius: 10rem;
+    z-index: -1; 
+}  
+
+.accent-light{
+    position: absolute; 
+    bottom: 0;  
+    right: 0;   
+    width: 10rem; 
+    height: 25rem; 
+    background: var(--c-bg-violet-gray); 
+    border-top-left-radius: 10rem;
+    z-index: -1; 
+}
+
+@media (min-width: 45em) {
+    main{ 
+       display: flex;  
+       justify-content: center;
+       align-items: center; 
+       gap: 3rem; 
+    } 
+    .phone{
+        margin: initial;  
+        scale: .9; 
+    }
+
+    .textBox{
+        align-items: flex-start;
+    }
+    .desc{
+        text-align: left; 
+    }
+
+    .accent-dark{
+        top: 00; 
+        width: 25rem; 
+        height: 90vh;
+        border-bottom-right-radius: 30rem; 
+    }  
+
+    .accent-light{
+        height: 80vh; 
+        width: 20rem; 
+        border-top-left-radius: 20rem;
+    }
+}
